@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "practicalfinancealgorithms"
+version = "0.1.0"
+description = "A curated collection of practical algorithms and code solutions for real-world finance problems. Focused on efficiency and applicability, this repository offers optimized implementations like JAX-based constrained regression, providing valuable tools for finance professionals without any unnecessary content."
+authors = ["Abhijit Gupta <abhijit038@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "practicalfinancealgorithms", from = "src" }
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jax = {extras = ["cuda12"], version = "^0.4.35"}
+jaxopt = "^0.8.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+ipython = "^8.29.0"
+mypy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
