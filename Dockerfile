@@ -36,6 +36,7 @@ WORKDIR $PYSETUP_PATH
 
 # Copy Poetry files
 COPY pyproject.toml poetry.lock ./
+COPY src/ ./src/
 
 # Install dependencies
 RUN poetry install --no-dev
